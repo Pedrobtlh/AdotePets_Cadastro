@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  width: 100vw;
+  height: 12vh;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #15151d;
+}
+
+.navbarElementsMain {
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  width: 250px;
+}
+
+.navbar h1 {
+  color: #eaeddf;
+  font-size: 42px;
+  font-weight: 100;
+}
+
+.navbarElements {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  list-style: none;
+  font-size: 22px;
+}
