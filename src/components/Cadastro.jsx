@@ -28,8 +28,6 @@ function Cadastro() {
     e.preventDefault();
     // Faz uma requisição POST para o servidor com os dados do formulário
 
-    const placeholderImageUrl = "https://via.placeholder.com/150";
-
     try {
       const response = await axios.post(
         "http://localhost:3000/posts",
@@ -39,6 +37,14 @@ function Cadastro() {
     } catch (error) {
       console.error("Erro ao Enviar ao formulário:", error);
     }
+
+    setFormData({
+      petName: "",
+      petBreed: "",
+      petAge: "",
+      petDetails: "",
+      petPhoto: "",
+    });
   };
 
   return (
