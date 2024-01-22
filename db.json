@@ -1,0 +1,12 @@
+{
+  "posts": [
+    {
+      "petName": "Belinha",
+      "petBreed": "Vira Lata",
+      "petAge": "2",
+      "petDetails": "Lindona",
+      "petPhoto": "C:\\fakepath\\transferir.jfif",
+      "id": 1
+    }
+  ]
+}
