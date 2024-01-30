@@ -37,6 +37,8 @@ function PetsCadastrados() {
 
             <h2 className={style.cardTitle}>Detalhes:</h2>
             <p className={style.cardText}>{pet.petDetails}</p>
+
+            <button className={style.buttonDetails}>Ver Mais</button>
           </div>
         ))}
       </div>

@@ -49,3 +49,16 @@ h1 {
   margin-bottom: 20px;
   color: #333;
 }
+
+.buttonDetails {
+  background-color: #198754;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 35px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.buttonDetails:hover {
+  background-color: #11e281;
+}
