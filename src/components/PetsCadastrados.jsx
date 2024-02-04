@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function PetsCadastrados() {
   const [petsData, setPetsData] = useState([]);
+  const [localStoragePets, setLocalStoragePets] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,16 +18,22 @@ function PetsCadastrados() {
     };
 
     fetchData();
+
+    // Obtém os pets do localStorage
+    const localStorageData = JSON.parse(localStorage.getItem("petData")) || [];
+    setLocalStoragePets(localStorageData);
   }, []);
+
+  const combinedPets = [...petsData, ...localStoragePets];
 
   return (
     <div>
       <h1>Pets Para Adoção</h1>
-      {petsData.length === 0 ? (
+      {combinedPets.length === 0 ? (
         <h2>Nenhum pet cadastrado!</h2>
       ) : (
         <div className={style.cardContainer}>
-          {petsData.map((pet) => (
+          {combinedPets.map((pet) => (
             <div key={pet.id} className={style.card}>
               <img src={pet.petPhoto} alt={`Foto de ${pet.petName}`} />
 

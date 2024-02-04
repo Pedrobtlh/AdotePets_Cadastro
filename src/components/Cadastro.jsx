@@ -38,6 +38,12 @@ function Cadastro() {
       console.error("Erro ao Enviar ao formulário:", error);
     }
 
+    const localStorageData = JSON.parse(localStorage.getItem("petData")) || [];
+
+    localStorageData.push(formData);
+
+    localStorage.setItem("petData", JSON.stringify(localStorageData));
+
     setFormData({
       petName: "",
       petBreed: "",
